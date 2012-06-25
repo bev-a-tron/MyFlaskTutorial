@@ -10,7 +10,7 @@ since I didn't know about forms when I started trying to learn Flask.
 Hello world
 -----------
 
-Open a file called hello.py.  Type the following.::
+Open a file called hello.py.  Type the following::
 
     from flask import Flask
     app = Flask(__name__)
