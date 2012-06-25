@@ -22,6 +22,5 @@ Open a file called hello.py.  Type the following::
     if __name__ == '__main__':
         app.run()::
 
-Now, run the code using:
-
-``python hello.py``
+Now, run the code using::
+python hello.py
