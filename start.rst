@@ -1,15 +1,30 @@
 This is Beverly's Flask tutorial
 ================================
 
-I wonder if this will make the correct type of header.
-------------------------------------------------------
+This tutorial is meant for people who have a good understanding of Python,
+but who have never done web programming before.  You should know a little
+bit of HTML, although it is not necessary to know about forms in HTML,
+since I didn't know about forms when I started trying to learn Flask.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse arcu mi, ullamcorper ac ornare a, facilisis non diam. Vestibulum massa sem, auctor nec auctor ac, fringilla nec purus. Nam quis eleifend lorem. Maecenas libero velit, volutpat vel mattis in, ornare et mauris. Nulla facilisi. Nullam hendrerit, tortor a ultrices sollicitudin, lectus nunc rutrum nibh, sed fringilla sem erat nec ante. Etiam tincidunt rutrum scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam arcu odio, cursus sed ornare a, sagittis vel leo. Ut malesuada, nunc a sagittis scelerisque, metus massa pellentesque leo, ac vulputate nibh dui a tortor. Praesent at dolor sed lacus egestas auctor. Duis consequat commodo arcu, et bibendum tortor mattis sed. In pulvinar magna et augue molestie euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In eget congue orci. Sed libero sem, sodales quis lacinia ornare, scelerisque ac eros.
 
-Praesent porta egestas purus, quis placerat orci ullamcorper id. Etiam consectetur justo sem. In fringilla convallis eleifend. Pellentesque lobortis arcu non ligula adipiscing ut congue ipsum tincidunt. Praesent tristique, eros vel viverra mollis, nulla massa mattis sem, in dictum orci magna sed dui. Etiam sed tellus ut neque aliquet commodo vitae eget metus. Suspendisse aliquam congue augue nec laoreet. Mauris auctor lorem urna. Donec commodo consectetur nisi, eu accumsan nulla feugiat id. Pellentesque rhoncus tempus tristique.
+Hello world
+-----------
 
-Nulla facilisi. Pellentesque sodales sodales massa, a sodales leo ultricies nec. Integer vel velit tortor. Donec in purus leo, nec dapibus augue. Curabitur nulla felis, aliquam sit amet pharetra nec, sollicitudin vel mi. Cras eleifend mattis libero, nec porttitor turpis semper sed. Vivamus viverra ornare mi, non laoreet arcu adipiscing in. Vivamus egestas libero ac enim viverra a porttitor dolor feugiat. Nam ac dui eu augue pulvinar gravida ut nec felis. Duis ac elementum nulla. Vivamus bibendum ornare magna, at vulputate lorem interdum sed. Vivamus odio velit, lacinia sit amet volutpat at, sagittis non lorem. Duis varius commodo varius. Duis eget quam diam. Fusce hendrerit, metus a eleifend suscipit, felis diam iaculis lorem, ut vehicula justo nibh lobortis nisl.
+Open a file called hello.py.  Type the following.
 
-Quisque sit amet gravida sapien. Donec tristique eleifend leo, vitae tristique ligula imperdiet commodo. Duis lorem est, tempus sed sagittis et, laoreet vitae dolor. Nulla in diam sed lectus posuere egestas. Aliquam condimentum, odio nec pharetra accumsan, justo felis varius nulla, non suscipit nisi tortor id est. Aliquam in erat nisi, vel tempus turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc nulla ipsum, dapibus vel scelerisque at, commodo et augue. Duis nec turpis quis felis dictum ultrices vitae ac risus. Mauris sagittis mattis ante eget congue. Nulla condimentum pharetra porta. Nam feugiat, nulla sed mollis consequat, quam est vehicula massa, ac tristique quam magna ut turpis.
+::
+    from flask import Flask
+    app = Flask(__name__)
 
-Nulla eget tellus tellus. Quisque congue cursus sagittis. Vestibulum nisi massa, blandit in accumsan ac, euismod quis felis. Sed sem justo, blandit ut semper ut, consectetur nec augue. Nullam eros diam, egestas eget malesuada eget, aliquet sed nisi. Curabitur eu placerat ante. Aliquam congue euismod arcu quis tristique. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam laoreet felis ut sem cursus egestas. Aliquam erat volutpat. Vivamus sed ipsum metus, ac tincidunt massa. Integer eu est dolor, vel vulputate mi. Quisque blandit venenatis velit at dictum.
+    @app.route('/')
+    def hello_world():
+        return 'Hello World!'
+
+    if __name__ == '__main__':
+        app.run()
+::
+
+Run this script using
+>> python hello.py
+
+
