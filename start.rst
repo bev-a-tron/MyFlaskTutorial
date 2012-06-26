@@ -49,7 +49,7 @@ address in a browser window, you should see a blank screen with text at the
 top right corner, which says "Hello World." 
 
 Note that the ``app_lulu.route('/')`` is showing which code to run (in this 
-case, hello_world_lulu) when the URL ``/`` is requested.  (A request is made 
+case, ``hello_world_lulu``) when the URL ``/`` is requested.  (A request is made 
 when the URL is visited.)
 
 When the URL is visited, the code is run, and a string is returned.  The 
