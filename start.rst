@@ -17,7 +17,7 @@ tutorials that are totally user-defined.  Basically::
 Instead of using willy-nilly names like "lulu", I will append "_lulu" to 
 the end of logical names, so it will be entirely obvious which names can be 
 changed with no penalty.  And, it will give you an idea of what "real"
-programmers might use to call a certain function (hint: just drop the "_lulu".
+programmers might use to call a certain function (hint: just drop the "_lulu").
 Naming things well is certainly a skill to be desired.
 
 Just realize, if you change the name of the file from hello_lulu.py
