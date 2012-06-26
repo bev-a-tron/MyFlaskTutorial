@@ -38,7 +38,7 @@ Open a file called hello_lulu.py.  Type the following::
         return 'Hello World!'
 
     if __name__ == '__main__':
-        app_lulu.run()::
+        app_lulu.run()
 
 Now, run the code from command line using::
 
