@@ -2,9 +2,8 @@ This is Beverly's Flask tutorial
 ================================
 
 This tutorial is meant for people who have a good understanding of Python,
-but who have never done web programming before.  You should know a little
-bit of HTML, although it is not necessary to know about forms in HTML,
-since I didn't know about forms when I started trying to learn Flask.
+but who have never done web programming before.  You should know static HTML, 
+but it is not necessary to know about forms, requests, and methods.
 
 Some housekeeping 
 -----------------
@@ -17,7 +16,9 @@ tutorials that are totally user-defined.  Basically::
 
 Instead of using willy-nilly names like "lulu", I will append "_lulu" to 
 the end of logical names, so it will be entirely obvious which names can be 
-changed with no penalty.
+changed with no penalty.  And, it will give you an idea of what "real"
+programmers might use to call a certain function.  Naming things well is 
+certainly a skill to be desired.
 
 Just realize, if you change the name of the file from hello_lulu.py
 to something else, like flufflepuff.py, make sure to mentally make that
@@ -27,19 +28,19 @@ change for the rest of the tutorial.
 Hello world
 -----------
 
-Open a file called hello.py.  Type the following::
+Open a file called hello_lulu.py.  Type the following::
 
     from flask import Flask
-    app = Flask(__name__)
+    app_lulu = Flask(__name__)
 
-    @app.route('/')
-    def hello_world():
+    @app_lulu.route('/')
+    def hello_world_lulu():
         return 'Hello World!'
 
     if __name__ == '__main__':
-        app.run()::
+        app_lulu.run()::
 
 Now, run the code from command line using::
 
-    >> python hello.py
+    >> python hello_lulu.py
 
