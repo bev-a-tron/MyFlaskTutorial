@@ -44,3 +44,24 @@ Now, run the code from command line using::
 
     >> python hello_lulu.py
 
+Running this code will start a server at: 127.0.0.1:5000.  If you visit that 
+address in a browser window, you should see a blank screen with text at the 
+top right corner, which says "Hello World." 
+
+Note that the ``app_lulu.route('/')`` is showing which code to run (in this 
+case, hello_world_lulu) when the URL ``/`` is requested.  (A request is made 
+when the URL is visited.)
+
+When the URL is visited, the code is run, and a string is returned.  The 
+string is the HTML code for the page.  Since HTML does not parse white space,
+one long string will translate to an HTML page easily.
+
+Short note on browsers
+----------------------
+
+127.0.0.1 is Home, or your own computer.  5000 is the port number.  Flask
+puts the server on Port 5000 as the defualt.
+
+I'm not going to talk a lot about this, because you can play with this on
+your own later.  It's not integral to web programming.
+
