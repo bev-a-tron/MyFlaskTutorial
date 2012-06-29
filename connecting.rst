@@ -27,7 +27,7 @@ You can try running it now with::
 
 Open a browser window and go to::
     
-    127.0.0.1:5000/index
+    127.0.0.1:5000/index_lulu
 
 WOW!  It looks PRETTY!  Yes, that's the style_lulu.css that we added to the 
 ~/MyFlaskTutorial/static directory.  Don't worry about it for now.
@@ -90,3 +90,26 @@ Open and edit the file ``~/MyFlaskTutorial/templates/userinfo_lulu.html``::
       </div>
     </div>
         
+Isn't that awesome?  We can pass variables from our backend to the rendered HTML page.  
+
+While we're here, take a look at the option called ``action`` in the ``form`` tag.  Do you remember 
+the error we got when we tried to click Submit?  It told us it couldn't find a page called ``index_lulu``,
+right?  Here's where we told it to look.  If you change this to ``index_tutu``, the error would have said::
+   
+    No webpage was found for the web address: file://localhost/Users/administrator/MyFlaskTutorial/templates/index_tutu
+    Error 6 (net::ERR_FILE_NOT_FOUND): The file or directory could not be found.
+
+Where is it looking for this file?  It's actually looking in application_lulu.py, trying to find a URL
+among the various ``@app_lulu.route()`` decorators.  If one of them exists, it will carry out the
+function that the decorator decorates (the function immediately below the ``@app_lulu.route()`` line).
+That function will return text (HTML code), and that is the page that will be loaded.  MAGIC!
+
+Preparing to learn about ``POST`` requests
+------------------------------------------
+
+You might also be curious about these options called ``name`` in two of the ``input`` tags in the ``form``. 
+These are the identifiers for their respective user-input fields in the form (which we have also named,
+``userinfoform_lulu``).  Here, we have called the ``name`` field ``name_lulu`` and we have called the ``age``
+field ``age_lulu``.
+
+We will need these identifiers as we progress to the next step:  understanding ``POST`` requests.
