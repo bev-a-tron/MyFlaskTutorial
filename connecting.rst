@@ -36,8 +36,8 @@ You should see the form we just made, with the user information and Submit butto
 ``Render_template`` will look for that HTML template in the ``~/MyFlaskTutorial/templates``
 directory.  That's why we put it there!
 
-In the ``hello world`` example, we saw that these functions need to return text,
-which consists of HTML code.  The ``render_template`` function will return text, and 
+In the ``hello world`` example, we saw that these functions must return text
+(HTML code).  The ``render_template`` function will return text, and 
 HTML text in fact!
 
 Passing variables to HTML files
