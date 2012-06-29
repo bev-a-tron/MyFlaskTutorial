@@ -60,9 +60,12 @@ Next, we will turn our attention to making the HTML template to return.
 Create the HTML template for questions
 --------------------------------------
 
+Open a file called ``layout_lulu.html`` inside the ``~/MyFlaskTutorial/templates/`` directory.
+Edit it to look like this::
+
     <!doctype html>
     <title>A short quiz</title>
-    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
     <div class=page>
       <h1>Question #{{num}}</h1>
       
@@ -71,12 +74,12 @@ Create the HTML template for questions
         {{question}}
         
         <h4>
-          <form id='answerform' method='post' action='next_lulu' >
+          <form id='answerform_lulu' method='post' action='next_lulu' >
     	<p>
     	  Answer: <br />
-    	  <input type='radio' name='answer' value="1" /> 1
-    	  <input type='radio' name='answer' value="2" /> 2
-    	  <input type='radio' name='answer' value="3" /> 3
+    	  <input type='radio' name='answer_lulu' value="1" /> 1
+    	  <input type='radio' name='answer_lulu' value="2" /> 2
+    	  <input type='radio' name='answer_lulu' value="3" /> 3
     	</p>
     	
     	<p>
@@ -87,3 +90,15 @@ Create the HTML template for questions
       </div>
     </div>
         
+This is using some HTML skills about forms.  You can look up different types of forms online.
+I'm sure Google will tell you.
+
+Now, you probably already realize that we need to refer to this HTML template with two variables,
+``num`` (which will be the question number) and ``question`` (which will be the question asked).
+The radio button form has a number of choices, but the user can only select one answer.  The
+user data can be referred to as ``request.form['answer_lulu']`` in the ``application_lulu.py``
+file.
+
+###############
+This will be a section on how to dress up the application_lulu.py file.
+###############

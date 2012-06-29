@@ -1,45 +1,20 @@
 <!doctype html>
-<title>A music test</title>
+<title>A short quiz</title>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
 <div class=page>
-  <h1>Sound clip #{{num}}</h1>
+  <h1>Question #{{num}}</h1>
 
   <div class=metanav>
 
-    <audio controls="controls", autoplay="autoplay">
-      <source src="/static/audioclips/{{filename}}" type="audio/mp3" />
-    </audio>
+{{question}}
 
 <h4>
-<form id='dataform' method='post' action='item' >
+<form id='answerform' method='post' action='next_lulu' >
    <p>
-   Do you recognize it?: <br />
-   <input type='radio' name='recog' value="yes"/> Yes <br />
-   <input type='radio' name='recog' value="no"/> No <br />
-   </p>
-   <p>
-   Name the composer: <br />
-   <input type='text' name='comp'>
-   </p>
-   <p>
-   Confidence (5=high): <br />
-   <input type='radio' name='comp_conf' value="1" /> 1
-   <input type='radio' name='comp_conf' value="2" /> 2
-   <input type='radio' name='comp_conf' value="3" /> 3
-   <input type='radio' name='comp_conf' value="4" /> 4
-   <input type='radio' name='comp_conf' value="5" /> 5
-   </p>
-   <p>
-   Name the piece: <br />
-   <input type='text' name='piece'>  
-   </p>
-   <p>
-   Confidence (5=high): <br />
-   <input type='radio' name='piece_conf' value="1" /> 1
-   <input type='radio' name='piece_conf' value="2" /> 2
-   <input type='radio' name='piece_conf' value="3" /> 3
-   <input type='radio' name='piece_conf' value="4" /> 4
-   <input type='radio' name='piece_conf' value="5" /> 5
+   Answer: <br />
+   <input type='radio' name='answer' value={{ans1}} /> {{ans1}}
+   <input type='radio' name='answer' value={{ans2}} /> {{ans2}}
+   <input type='radio' name='answer' value={{ans3}} /> {{ans3}}
    </p>
 
    <p>
@@ -49,4 +24,4 @@
 </h4>
 
 </div>
-
+</div>
