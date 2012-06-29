@@ -29,8 +29,8 @@ Open a browser window and go to::
     
     127.0.0.1:5000/index_lulu
 
-WOW!  It looks PRETTY!  Yes, that's the style_lulu.css that we added to the 
-~/MyFlaskTutorial/static directory.  Don't worry about it for now.
+WOW!  It looks PRETTY!  Yes, that's the ``style_lulu.css`` that we added to the 
+``~/MyFlaskTutorial/static directory``.  Don't worry about it for now.
 
 You should see the form we just made, with the user information and Submit buttom. 
 ``Render_template`` will look for that HTML template in the ``~/MyFlaskTutorial/templates``
