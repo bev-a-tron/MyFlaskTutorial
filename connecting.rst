@@ -94,15 +94,25 @@ Isn't that awesome?  We can pass variables from our backend to the rendered HTML
 
 While we're here, take a look at the option called ``action`` in the ``form`` tag.  Do you remember 
 the error we got when we tried to click Submit?  It told us it couldn't find a page called ``index_lulu``,
-right?  Here's where we told it to look.  If you change this to ``index_tutu``, the error would have said::
+right?  Here's where we told it to look.  If you change this to ``index_tutu``, the error will say::
    
     No webpage was found for the web address: file://localhost/Users/administrator/MyFlaskTutorial/templates/index_tutu
     Error 6 (net::ERR_FILE_NOT_FOUND): The file or directory could not be found.
 
 Where is it looking for this file?  It's actually looking in application_lulu.py, trying to find a URL
-among the various ``@app_lulu.route()`` decorators.  If one of them exists, it will carry out the
+among the arguments to the ``@app_lulu.route()`` decorators.  If the URL is found, it will carry out the
 function that the decorator decorates (the function immediately below the ``@app_lulu.route()`` line).
-That function will return text (HTML code), and that is the page that will be loaded.  MAGIC!
+That function will return text (HTML code), and that is the page that will be loaded.  
+
+For the time being, in ``application_lulu.py``, we have created a decorator::
+    @app_lulu.route('/index_lulu')
+    def index_lulu():
+    	...
+
+So, the webpage CAN be found at ``127.0.0.1:5000/index_lulu', and we are telling the client that the 
+webpage to be returned is ``userinfo_lulu.html``, which can be found in the ``~/MyFlaskTutorial/templates``
+
+It works so far!
 
 Preparing to learn about ``POST`` requests
 ------------------------------------------
