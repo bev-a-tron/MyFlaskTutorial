@@ -33,22 +33,23 @@ Let's get some HTML code working first.
 
 Open a file called userinfo_lulu.html, and save it to the ``templates`` directory::
 
-     <!doctype html>
-     <title>An example form</title>
-     <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
-     <div class=page>
-       <h1>An example form</h1>
-       <div class=metanav>
+       <!doctype html>
+       <title>An example form</title>
+       <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+       <div class=page>
+         <h1>An example form</h1>
+	 <div class=metanav>
+	   
+	   <form id='userinfoform' method='post' action='index' >
+	     <p>
+	       Name: <input type='text' name='name' />
+	     </p>
+	     <p>
+	       Age: <input type='text' name='age' />
+	     </p>
+	     <p>
+	       <input type='submit' value='Submit' />
+	     </p>
+	   </form>
+	 </div>
 
-       <form id='userinfoform' method='post' action='index' >
-       <p>
-       Name: <input type='text' name='name' />
-       </p>
-       <p>
-       Age: <input type='text' name='age' />
-       </p>
-       <p>
-       <input type='submit' value='Submit' />
-       </p>
-       </form>
-    </div>
