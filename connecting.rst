@@ -116,7 +116,7 @@ the ``~/MyFlaskTutorial/templates``
 
 It works so far!
 
-Preparing to learn about ``POST`` requests
+Preparing to learn about POST requests
 ------------------------------------------
 
 You might also be curious about these options called ``name`` in two of the ``input`` tags in the ``form``. 
