@@ -47,7 +47,7 @@ Open a file called hello_lulu.py.  Type the following::
     from flask import Flask
     app_lulu = Flask(__name__)
 
-    @app_lulu.route('/')
+    @app_lulu.route('/hello_lulu2')
     def hello_world_lulu():
         return 'Hello World!'
 
@@ -58,12 +58,12 @@ Now, run the code from command line using::
 
     >> python hello_lulu.py
 
-Running this code will start a server at: 127.0.0.1:5000.  If you visit that 
-address in a browser window, you should see a blank screen with text at the 
-top right corner, which says "Hello World." 
+Running this code will start a server at: 127.0.0.1:5000/hello_lulu2.  If you 
+visit that address in a browser window, you should see a blank screen with 
+text at the top left corner, which says "Hello World." 
 
-Note that the ``app_lulu.route('/')`` is showing which code to run (in this 
-case, ``hello_world_lulu``) when the URL ``/`` is requested.  (A request is made 
+Note that the ``app_lulu.route('/hello_lulu2')`` is showing which code to run (in this 
+case, ``hello_world_lulu``) when the URL ``/hello_lulu2`` is requested.  (A request is made 
 when the URL is visited.)
 
 When the URL is visited, the code is run, and a string is returned.  The 
