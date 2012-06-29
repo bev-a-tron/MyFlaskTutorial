@@ -66,4 +66,4 @@ Once the HTML file is written, you can view it in a web browser.  You can do thi
 
 It should look like this:
 
-   .. image:: quiz_form.png
+..image:: quiz_form.png
