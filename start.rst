@@ -7,10 +7,10 @@ but it is not necessary to know about forms, requests, and methods.
 
 I finally "understood" Flask when I realized
 
--how the different functions are called based on "GET" and "POST" requests
--when I realized what a "request" was
--how HTML pages are rendered and returned
--how to use Python as the machinery to decide which function to call
+- how the different functions are called based on "GET" and "POST" requests
+- when I realized what a "request" was
+- how HTML pages are rendered and returned
+- how to use Python as the machinery to decide which function to call
 
 Some housekeeping 
 -----------------
