@@ -111,7 +111,8 @@ For the time being, in ``application_lulu.py``, we have created a decorator::
     	...
 
 So, the webpage CAN be found at ``127.0.0.1:5000/index_lulu``, and we are telling the client that the 
-webpage to be returned is ``userinfo_lulu.html``, which can be found in the ``~/MyFlaskTutorial/templates``
+webpage to be returned (when Submit is clicked) is ``userinfo_lulu.html``, which can be found in 
+the ``~/MyFlaskTutorial/templates``
 
 It works so far!
 
