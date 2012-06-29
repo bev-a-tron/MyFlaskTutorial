@@ -49,6 +49,9 @@ Open a file called hello_lulu.py.  Type the following::
 
     @app_lulu.route('/hello_lulu2')
     def hello_world_lulu():
+    	# this is a comment, just like in Python
+	# note that the function name and the route argument
+	# do not need to be the same.
         return 'Hello World!'
 
     if __name__ == '__main__':
