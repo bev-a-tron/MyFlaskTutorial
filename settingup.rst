@@ -31,7 +31,7 @@ simple page, then add a form.  We will use that form to demonstrate HTTP
 methods, including `GET` and `POST`.  Don't worry about what they are now.
 Let's get some HTML code working first.
 
-Open a file called userinfo_lulu.html, and save it to the ``templates`` directory::
+Open a file called ``userinfo_lulu.html``, and save it to the ``templates`` directory::
 
     <!doctype html>
     <title>A short quiz</title>

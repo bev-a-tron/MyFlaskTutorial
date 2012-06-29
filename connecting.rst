@@ -20,3 +20,9 @@ Inside ``application.py``, edit the file to look like this::
 You can try running it now with::
 
     python application.py
+
+Open a browser window and go to::
+    
+    127.0.0.1:5000/index
+
+You should see the form we just made.  
