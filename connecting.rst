@@ -105,11 +105,11 @@ function that the decorator decorates (the function immediately below the ``@app
 That function will return text (HTML code), and that is the page that will be loaded.  
 
 For the time being, in ``application_lulu.py``, we have created a decorator::
+
     @app_lulu.route('/index_lulu')
     def index_lulu():
-    	...
 
-So, the webpage CAN be found at ``127.0.0.1:5000/index_lulu', and we are telling the client that the 
+So, the webpage CAN be found at ``127.0.0.1:5000/index_lulu``, and we are telling the client that the 
 webpage to be returned is ``userinfo_lulu.html``, which can be found in the ``~/MyFlaskTutorial/templates``
 
 It works so far!
