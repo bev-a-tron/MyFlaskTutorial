@@ -1,11 +1,15 @@
 Connecting an application with HTML
 ===================================
 
-Copy ``hello_lulu.py``.  Call the new file ``application.py``.  We will edit this file 
+Copy ``hello_lulu.py``.  Call the new file ``application_lulu.py``.  We will edit this file 
 to produce a web application that will display the HTML form when the specified URL is
 accessed.
 
-Inside ``application.py``, edit the file to look like this::
+
+Application.py
+--------------
+
+Inside ``application_lulu.py``, edit the file to look like this::
 
        from flask import Flask,render_template
        app_lulu = Flask(__name__)
@@ -19,10 +23,70 @@ Inside ``application.py``, edit the file to look like this::
 
 You can try running it now with::
 
-    python application.py
+    python application_lulu.py
 
 Open a browser window and go to::
     
     127.0.0.1:5000/index
 
-You should see the form we just made.  
+WOW!  It looks PRETTY!  Yes, that's the style_lulu.css that we added to the 
+~/MyFlaskTutorial/static directory.  Don't worry about it for now.
+
+You should see the form we just made, with the user information and Submit buttom. 
+``Render_template`` will look for that HTML template in the ``~/MyFlaskTutorial/templates``
+directory.  That's why we put it there!
+
+In the ``hello world`` example, we saw that these functions need to return text,
+which consists of HTML code.  The ``render_template`` function will return text, and 
+HTML text in fact!
+
+Passing variables to HTML files
+-------------------------------
+
+You can pass variables to the output HTML through the ``render_template`` function.
+For example, we may want to tell the user how many questions we're going to ask.
+
+To do this, edit the ``application_lulu.py`` file::
+
+       from flask import Flask,render_template
+       app_lulu = Flask(__name__)
+       
+       @app_lulu.route('/index_lulu')
+       def index_lulu():
+           nquestions=5
+           return render_template('userinfo_lulu.html',num=nquestions)
+
+       if __name__ == "__main__":
+           app_lulu.run()
+
+You also need to edit the HTML file to tell it to expect the variable
+``num`` and to tell it what to do with that information.
+
+Open and edit the file ``~/MyFlaskTutorial/templates/userinfo_lulu.html``::
+
+    <!doctype html>
+    <title>A short quiz</title>
+    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
+    <div class=page>
+      <h1>A short quiz</h1>
+      <div class=metanav>
+        <h4>                                                                                                                
+          You will be asked {{num}} questions.
+          Please answer them to the best of your ability.                                                                     
+        </h4>
+        
+        <form id='userinfoform_lulu' method='post' action='index_lulu' >
+          <p>
+    	Name: <input type='text' name='name_lulu' />
+          </p>
+          <p>
+    	Age: <input type='text' name='age_lulu' />
+          </p>
+          <p>
+    	<input type='submit' value='Submit' />
+          </p>
+        </form>
+        
+      </div>
+    </div>
+        
