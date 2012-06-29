@@ -5,6 +5,13 @@ This tutorial is meant for people who have a good understanding of Python,
 but who have never done web programming before.  You should know static HTML, 
 but it is not necessary to know about forms, requests, and methods.
 
+I finally "understood" Flask when I realized
+
+-how the different functions are called based on "GET" and "POST" requests
+-when I realized what a "request" was
+-how HTML pages are rendered and returned
+-how to use Python as the machinery to decide which function to call
+
 Some housekeeping 
 -----------------
 
@@ -60,10 +67,9 @@ Short note on browsers
 ----------------------
 
 127.0.0.1 is Home, or your own computer.  5000 is the port number.  Flask
-puts the server on Port 5000 as the defualt.
-
-I'm not going to talk a lot about this, because you can play with this on
-your own later.  It's not integral to web programming.
+puts the server on Port 5000 as the defualt. I'm not going to talk a lot 
+about this (actually I'm not going to talk at all about this), because you 
+can play with this on your own later.
 
 Setting up the directory structure
 -------------------
