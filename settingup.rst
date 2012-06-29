@@ -33,23 +33,30 @@ Let's get some HTML code working first.
 
 Open a file called userinfo_lulu.html, and save it to the ``templates`` directory::
 
-       <!doctype html>
-       <title>An example form</title>
-       <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
-       <div class=page>
-         <h1>An example form</h1>
-	 <div class=metanav>
-	   
-	   <form id='userinfoform' method='post' action='index' >
-	     <p>
-	       Name: <input type='text' name='name' />
-	     </p>
-	     <p>
-	       Age: <input type='text' name='age' />
-	     </p>
-	     <p>
-	       <input type='submit' value='Submit' />
-	     </p>
-	   </form>
-	 </div>
-
+    <!doctype html>
+    <title>A short quiz</title>
+    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+    <div class=page>
+      <h1>A short quiz</h1>
+      <div class=metanav>
+        
+        <h4>                                                                                    
+          You will be asked a series of questions.                                                
+          Please answer them to the best of your ability.                                         
+        </h4>
+        
+        <form id='userinfoform_lulu' method='post' action='index_lulu' >
+          <p>
+    	Name: <input type='text' name='name_lulu' />
+          </p>
+          <p>
+    	Age: <input type='text' name='age_lulu' />
+          </p>
+          <p>
+    	<input type='submit' value='Submit' />
+          </p>
+        </form>
+        
+      </div>
+    </div>
+        
