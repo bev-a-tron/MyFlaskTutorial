@@ -35,7 +35,7 @@ Open a file called userinfo_lulu.html, and save it to the ``templates`` director
 
     <!doctype html>
     <title>A short quiz</title>
-    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
     <div class=page>
       <h1>A short quiz</h1>
       <div class=metanav>
