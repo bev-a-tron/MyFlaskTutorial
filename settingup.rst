@@ -66,6 +66,5 @@ Once the HTML file is written, you can view it in a web browser.  You can do thi
 
 For funsies, you can try entering data to the form, then clicking on Submit.  You might get an error that looks like this::
 
-    This webpage is not found.  
     No webpage was found for the web address: file://localhost/Users/administrator/MyFlaskTutorial/templates/index_lulu
     Error 6 (net::ERR_FILE_NOT_FOUND): The file or directory could not be found.
