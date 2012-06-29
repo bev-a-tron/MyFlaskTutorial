@@ -70,5 +70,3 @@ For funsies, you can try entering data to the form, then clicking on Submit.  Yo
     Error 6 (net::ERR_FILE_NOT_FOUND): The file or directory could not be found.
 
 In the next part of the tutorial, we will build the backend that will generate the page that cannot currently be found.
-
-Testing.
