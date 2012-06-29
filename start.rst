@@ -10,7 +10,14 @@ I finally "understood" Flask when I realized
 - how the different functions are called based on "GET" and "POST" requests
 - what a "request" was
 - how HTML pages are rendered and returned
-- how to use Python as the machinery to decide which function to call
+- how to use Python as the machinery to decide which function to call (and thus
+  which HTML template to return)
+
+After a short visit with a simple "Hello World" application, we will build a quiz
+application that will demonstrate "GET" and "POST" requests, rendering HTML templates,
+and redirecting to other functions that will render the appropriate HTML 
+templates.  User input will determine the HTML pages that are returned, and 
+the data will be written to a text file on the server side.
 
 Some housekeeping 
 -----------------
