@@ -65,3 +65,33 @@ puts the server on Port 5000 as the defualt.
 I'm not going to talk a lot about this, because you can play with this on
 your own later.  It's not integral to web programming.
 
+The matching HTML code
+----------------------
+
+None of this web app stuff means anything without HTML code.  Let's make a 
+simple page, then add a form.  We will use that form to demonstrate HTTP
+methods, including `GET` and `POST`.  Don't worry about what they are now.
+Let's get some HTML code working first.
+
+Open a file called userinfo_lulu.html::
+
+     <!doctype html>
+     <title>An example form</title>
+     <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+     <div class=page>
+       <h1>An example form</h1>
+       <div class=metanav>
+
+       <form id='userinfoform' method='post' action='index' >
+       <p>
+       Name: <input type='text' name='name' />
+       </p>
+       <p>
+       Age: <input type='text' name='age' />
+       </p>
+       <p>
+       <input type='submit' value='Submit' />
+       </p>
+       </form>
+    </div>
+
