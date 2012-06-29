@@ -6,8 +6,8 @@ to produce a web application that will display the HTML form when the specified 
 accessed.
 
 
-Application.py
---------------
+Making the application
+----------------------
 
 Inside ``application_lulu.py``, edit the file to look like this::
 
