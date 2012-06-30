@@ -13,10 +13,10 @@ Set up your directories like this (put it somewhere, like your home directory)::
         /templates
 
 Copy the file ``style_lulu.css`` and put it in the ``static`` directory.  We will not
-discuss css style sheets in this Tutorial.  It will just make your app look pretty.  Like
+discuss CSS style sheets in this tutorial.  It will just make your app look pretty.  Like
 magic.
 
-The ``templates`` directory will hold html files that we will use to construct pages that
+The ``templates`` directory will hold HTML files that we will use to construct pages that
 will depend on user input.
 
 In the ``MyFlaskTutorial_lulu`` directory, we will place the main Python program that
