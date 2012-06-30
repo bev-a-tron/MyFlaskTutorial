@@ -64,6 +64,10 @@ Once the HTML file is written, you can view it in a web browser.  You can do thi
 
      open -a /Applications/Google\ Chrome.app/ userinfo_lulu.html
 
+Take a look at the url_for method in the link tag. The url_for method will help figure out the css filepath.
+    
+    url_for('static',filename='style_lulu.css')
+
 For funsies, you can try entering data to the form, then clicking on Submit.  You might get an error that looks like this::
 
     No webpage was found for the web address: file://localhost/Users/administrator/MyFlaskTutorial/templates/index_lulu
