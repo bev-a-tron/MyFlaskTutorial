@@ -77,6 +77,6 @@ Short note on browsers
 ----------------------
 
 127.0.0.1 is Home, or your own computer.  5000 is the port number.  Flask
-puts the server on Port 5000 as the defualt. I'm not going to talk a lot 
+puts the server on Port 5000 as the default. I'm not going to talk a lot 
 about this (actually I'm not going to talk at all about this), because you 
 can play with this on your own later.
