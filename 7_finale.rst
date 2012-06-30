@@ -60,7 +60,8 @@ If you don't believe me, you can try out linking to the end page::
             f.write('Age: %s\n\n'%(app_lulu.vars['age']))
             f.close()
 
-            return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',ans2='2',ans3='3')
+            return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',\
+	       ans2='2',ans3='3')
 
     @app_lulu.route('/next_lulu',methods=['POST'])
     def next_lulu():

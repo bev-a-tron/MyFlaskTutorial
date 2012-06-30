@@ -108,7 +108,8 @@ this for one question first, then we can add more questions.
 Open ``application_lulu.py`` and replace the appropriate return line with this.  Try to do it yourself.
 If you can't figure it out, the full text is right below::
 
-    return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',ans2='2',ans3='3')
+    return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',\
+        ans2='2',ans3='3')
 
 The full ``application_lulu.py`` should look like::
 
@@ -132,7 +133,8 @@ The full ``application_lulu.py`` should look like::
             f.write('Age: %s\n\n'%(app_lulu.vars['age']))
             f.close()
 
-            return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',ans2='2',ans3='3')
+            return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',\
+	        ans2='2',ans3='3')
 
     if __name__ == "__main__":
         app_lulu.run()

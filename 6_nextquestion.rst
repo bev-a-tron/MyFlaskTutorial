@@ -8,7 +8,8 @@ Open ``application_lulu.py`` and add this decorated function::
 
     @app_lulu.route('/next_lulu',methods=['POST'])
     def next_lulu():  #remember the function name does not need to match the URL                                                              
-        return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',ans2='mango',ans3='pineapple')
+        return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',\
+	    ans2='mango',ans3='pineapple')
 
 In case it isn't clear, the whole file ``application_lulu.py`` should now look like::
 
@@ -32,11 +33,13 @@ In case it isn't clear, the whole file ``application_lulu.py`` should now look l
             f.write('Age: %s\n\n'%(app_lulu.vars['age']))
             f.close()
 
-            return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',ans2='2',ans3='3')
+            return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',\
+	        ans2='2',ans3='3')
 
     @app_lulu.route('/next_lulu',methods=['POST'])
     def next_lulu():  #remember the function name does not need to match the URL                                                                                     
-        return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',ans2='mango',ans3='pineapple')
+        return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',\
+	    ans2='mango',ans3='pineapple')
 
     if __name__ == "__main__":
         app_lulu.run()
@@ -79,7 +82,8 @@ to give the rendered template::
             f.write('Age: %s\n\n'%(app_lulu.vars['age']))
             f.close()
 
-            return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',ans2='2',ans3='3')
+            return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',\
+	        ans2='2',ans3='3')
 
     @app_lulu.route('/next_lulu',methods=['POST'])
     def next_lulu():
@@ -87,7 +91,8 @@ to give the rendered template::
 
     @app_lulu.route('/usefulfunction_lulu',methods=['POST'])
     def usefulfunction_lulu():
-        return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',ans2='mango',ans3='pineapple')
+        return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',\
+	    ans2='mango',ans3='pineapple')
 
     if __name__ == "__main__":
         app_lulu.run()
