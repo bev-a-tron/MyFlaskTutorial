@@ -9,4 +9,6 @@ You should go through the tutorial in the following order:
 - connecting.rst
 - requests.rst
 - linking.rst
-- 
+- nextquestion.rst
+- finale.rst
+- wrapup.rst
