@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,redirect,url_for
+from flask import Flask,render_template,request,redirect
 app_lulu = Flask(__name__)
 
 app_lulu.vars={}
@@ -15,8 +15,6 @@ app_lulu.nquestions=len(app_lulu.questions)
 def index_lulu():
     nquestions=app_lulu.nquestions
     if request.method == 'GET':
-        #initialize question number
-        app_lulu.num=0
         return render_template('userinfo_lulu.html',num=nquestions)
     else:
         #request was a POST
@@ -29,13 +27,11 @@ def index_lulu():
         f.close()
 
         return redirect('/main_lulu')
-        #return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',ans2='2',ans3='3')
 
 @app_lulu.route('/main_lulu')
 def main_lulu2():
     if len(app_lulu.questions)==0 : return render_template('end_lulu.html')
-    app_lulu.num+=1 # app_lulu.num = app_lulu.num + 1
-    return redirect(url_for('next_lulu'))
+    return redirect('/next_lulu')
 
 #####################################
 ## IMPORTANT: I have separated /next_lulu INTO GET AND POST
@@ -44,7 +40,7 @@ def main_lulu2():
 @app_lulu.route('/next_lulu',methods=['GET'])
 def next_lulu():  #remember the function name does not need to match the URL
     # for clarity (temp variables):
-    n=app_lulu.num
+    n=app_lulu.nquestions-len(app_lulu.questions)+1
     q=app_lulu.questions.keys()[0] #python indexes at 0
     a1=app_lulu.questions[q][0]
     a2=app_lulu.questions[q][1]
@@ -65,9 +61,10 @@ def next_lulu2():  #can't have two functions with the same name
     f.write('%s\n'%(app_lulu.currentq))
     f.write('%s\n\n'%(request.form['answer_lulu'])) #do you know where answer_lulu comes from?
     f.close()
+
     app_lulu.questions.pop(app_lulu.currentq)
 
-    return redirect('main_lulu')
+    return redirect('/main_lulu')
 
 if __name__ == "__main__":
     app_lulu.run()

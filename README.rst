@@ -8,3 +8,5 @@ You should go through the tutorial in the following order:
 - settingup.rst
 - connecting.rst
 - requests.rst
+- linking.rst
+- 
