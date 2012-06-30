@@ -18,7 +18,7 @@ def index_lulu():
         f.write('Age: %s\n\n'%(app_lulu.vars['age']))
         f.close()
 
-        return 'request.method was not a GET!'
+        return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',ans2='2',ans3='3')
 
 if __name__ == "__main__":
     app_lulu.run()

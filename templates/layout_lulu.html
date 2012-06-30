@@ -1,6 +1,6 @@
 <!doctype html>
 <title>A short quiz</title>
-<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
 <div class=page>
   <h1>Question #{{num}}</h1>
 
@@ -9,16 +9,16 @@
 {{question}}
 
 <h4>
-<form id='answerform' method='post' action='next_lulu' >
+<form id='answerform_lulu' method='post' action='next_lulu' >
    <p>
    Answer: <br />
-   <input type='radio' name='answer' value={{ans1}} /> {{ans1}}
-   <input type='radio' name='answer' value={{ans2}} /> {{ans2}}
-   <input type='radio' name='answer' value={{ans3}} /> {{ans3}}
+   <input type='radio' name='answer_lulu' value={{ans1}} /> {{ans1}} <br />
+   <input type='radio' name='answer_lulu' value={{ans2}} /> {{ans2}} <br />
+   <input type='radio' name='answer_lulu' value={{ans3}} /> {{ans3}} <br />
    </p>
 
    <p>
-   <input type='submit' value='Next' />
+   <input type='submit' value='Next_lulu' />
    </p>
 </form>
 </h4>

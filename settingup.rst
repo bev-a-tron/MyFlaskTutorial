@@ -53,7 +53,7 @@ Open a file called ``userinfo_lulu.html``, and save it to the ``templates`` dire
     	Age: <input type='text' name='age_lulu' />
           </p>
           <p>
-    	<input type='submit' value='Submit' />
+    	<input type='submit' value='Submit_lulu' />
           </p>
         </form>
         
