@@ -12,7 +12,7 @@ Set up your directories like this (put it somewhere, like your home directory)::
         /static
         /templates
 
-Copy the file ``style_lulu.css`` and put it in the ``static`` directory.  We will not
+Copy the file ``style_lulu.css`` (find it in the Github repository, in the static directory) and put it in the ``static`` directory.  We will not
 discuss CSS style sheets in this tutorial.  It will just make your app look pretty.  Like
 magic.
 
