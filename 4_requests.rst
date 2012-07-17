@@ -9,7 +9,7 @@ The ``request`` module must be imported from flask.  You can update the import l
     from flask import Flask,render_template,request
 
 The ``request`` module has an attribute called ``method``, which only has a value if a request is made.  When
-the request is made, it takes the value of ``GET`` or ``POST`` (or a few other possible values, but we will are
+the request is made, it takes the value of ``GET`` or ``POST`` (or a few other possible values, but we are
 ignoring them, remember?).
 
 There is some amount of philosophical argument about when to use ``GET`` and when to use ``POST``.  From what I
