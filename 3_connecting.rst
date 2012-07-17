@@ -104,7 +104,7 @@ among the arguments to the ``@app_lulu.route()`` decorators.  If the URL is foun
 function that the decorator decorates (the function immediately below the ``@app_lulu.route()`` line).
 That function will return text (HTML code), and that is the page that will be loaded.  
 
-For the time being, in ``application_lulu.py``, we have created a decorator::
+For the time being, in ``application_lulu.py``, we have created a decorated function::
 
     @app_lulu.route('/index_lulu')
     def index_lulu():
