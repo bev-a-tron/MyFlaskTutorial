@@ -38,6 +38,15 @@ Just realize, if you change the name of the file from hello_lulu.py
 to something else, like flufflepuff.py, make sure to mentally make that
 change for the rest of the tutorial.
 
+A Quick Note about Debug Mode
+-----------------------------
+In this tutorial, you'll be running your app in Debug Mode.  This is very helpful
+for you - it means that if the server hits an error, it will give you a detailed 
+message instead of just "500 - Internal Server Error" or something similarly 
+non-obvious.  However, it's important to note that debug mode is HIGHLY 
+INSECURE, and should absolutely never be used on production machines.  If that 
+doesn't mean much to you, don't worry about it - you won't be running on 
+production machines in this tutorial.  
 
 Hello world
 -----------
@@ -55,7 +64,7 @@ Open a file called hello_lulu.py.  Type the following::
         return 'Hello World!'
 
     if __name__ == '__main__':
-        app_lulu.run()
+        app_lulu.run(debug=True)
 
 Now, run the code from command line using::
 
