@@ -117,8 +117,11 @@ Open ``application_lulu.py`` one last time.  Change the contents to look like::
         if len(app_lulu.questions)==0 : return render_template('end_lulu.html')
         return redirect(url_for('next_lulu'))
 
-    #####################################                                                                                                                           ## IMPORTANT: I have separated /next_lulu INTO GET AND POST                                                                                                     ## You can also do this in one function, with If and Elif
+    #####################################
+    ## IMPORTANT: I have separated /next_lulu INTO GET AND POST
+    ## You can also do this in one function, with If and Elif
     ## The attribute that contains GET and POST is: request.method
+    #####################################
 
     @app_lulu.route('/next_lulu',methods=['GET'])
     def next_lulu(): #remember the function name does not need to match the URL
