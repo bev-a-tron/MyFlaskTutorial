@@ -42,7 +42,7 @@ In case it isn't clear, the whole file ``application_lulu.py`` should now look l
 	    ans2='mango',ans3='pineapple')
 
     if __name__ == "__main__":
-        app_lulu.run()
+        app_lulu.run(debug=True)
 
 Try running it.  IT WORKS, RIGHT?  But, when you click on Next after the fruit question, what do you get?  IT'S THE FRUIT QUESTION AGAIN.
 How can we fix this?  We need to somehow tell the application to keep track of the questions being asked.  We can make a list of 
@@ -95,7 +95,7 @@ to give the rendered template::
 	    ans2='mango',ans3='pineapple')
 
     if __name__ == "__main__":
-        app_lulu.run()
+        app_lulu.run(debug=True)
 
 I think that's most of the FLASK-ESQUE stuff.  The rest is all PYTHON.  In the next section, we'll put some of this stuff together,
 using Python dictionaries to make the question-asking scalable (easier to add more questions), and to automate the process
