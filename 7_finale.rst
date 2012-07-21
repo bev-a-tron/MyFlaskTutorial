@@ -82,7 +82,7 @@ Now the final program, for real
 
 Open ``application_lulu.py`` one last time.  Change the contents to look like::
 
-    from flask import Flask,render_template,request,redirect,url_for
+    from flask import Flask,render_template,request,redirect
     app_lulu = Flask(__name__)
 
     app_lulu.vars={}
@@ -115,22 +115,22 @@ Open ``application_lulu.py`` one last time.  Change the contents to look like::
     @app_lulu.route('/main_lulu')
     def main_lulu2():
         if len(app_lulu.questions)==0 : return render_template('end_lulu.html')
-        return redirect(url_for('next_lulu'))
+        return redirect('/next_lulu')
 
-    #####################################                                                                                                                           ## IMPORTANT: I have separated /next_lulu INTO GET AND POST                                                                                                     ## You can also do this in one function, with If and Elif
+    #####################################                                                                                                                          
+    ## IMPORTANT: I have separated /next_lulu INTO GET AND POST                                                                                                     
+    ## You can also do this in one function, with If and Else
     ## The attribute that contains GET and POST is: request.method
 
     @app_lulu.route('/next_lulu',methods=['GET'])
     def next_lulu(): #remember the function name does not need to match the URL
         # for clarity (temp variables)
-        n=app_lulu.nquestions-len(app_lulu.questions)+1
-        q=app_lulu.questions.keys()[0] #python indexes at 0
-        a1=app_lulu.questions[q][0]
-        a2=app_lulu.questions[q][1]
-        a3=app_lulu.questions[q][2]
+        n = app_lulu.nquestions - len(app_lulu.questions) + 1
+        q = app_lulu.questions.keys()[0] #python indexes at 0
+        a1, a2, a3 = app_lulu.questions.values()[0] #this will return the answers corresponding to q
 
         # save the current question key
-        app_lulu.currentq=q
+        app_lulu.currentq = q
 
         return render_template('layout_lulu.html',num=n,question=q,ans1=a1,ans2=a2,ans3=a3)
 
@@ -140,15 +140,15 @@ Open ``application_lulu.py`` one last time.  Change the contents to look like::
         # Then, we return to the main function, so it can tell us whether to
         # display another question page, or to show the end page.
 
-        f=open('%s_%s.txt'%(app_lulu.vars['name'],app_lulu.vars['age']),'a') #a is for append
+        f = open('%s_%s.txt'%(app_lulu.vars['name'],app_lulu.vars['age']),'a') #a is for append
         f.write('%s\n'%(app_lulu.currentq))
-        f.write('%s\n\n'%(request.form['answer_lulu'])) #do you know where answer_lulu comes from?
+        f.write('%s\n\n'%(request.form['answer_from_layout_lulu'])) #this was the 'name' on layout.html!
         f.close()
 
         # Remove question from dictionary
-        app_lulu.questions.pop(app_lulu.currentq)
+        del app_lulu.questions[app_lulu.currentq]
 
-        return redirect('main_lulu')
+        return redirect('/main_lulu')
 
     if __name__ == "__main__":
         app_lulu.run(debug=True)
@@ -156,7 +156,7 @@ Open ``application_lulu.py`` one last time.  Change the contents to look like::
 Try running it.  I HOPE IT WORKS FOR YOU, TOO!  If you look at the code here, you can hopefully follow which
 functions are being called as you click through the web application.  
 
-The questions are stored as a dictionary.  The questions are popped after they are used, and the question
+The questions are stored as a dictionary.  The questions are deleted after they are used, and the question
 number is determined by the number of key/value pairs in the dictionary.
 
 We have made a ``main_lulu`` function, which determined whether there are any questions left to ask.  If
