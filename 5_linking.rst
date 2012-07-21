@@ -83,7 +83,7 @@ Edit it to look like this::
 	    </p>
 	    
 	    <p>
-	      <input type='submit' value='Next_lulu' />
+	      <input type='submit' value='NextButton_lulu' />
 	    </p>
 	  </form>
 	</h4>
