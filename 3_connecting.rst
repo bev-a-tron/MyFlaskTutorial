@@ -32,7 +32,7 @@ Open a browser window and go to::
 WOW!  It looks PRETTY!  Yes, that's the ``style_lulu.css`` that we added to the 
 ``~/MyFlaskTutorial/static directory``.  Don't worry about it for now.
 
-You should see the form we just made, with the user information and Submit buttom. 
+You should see the form we just made, with the user information and Submit button. 
 ``Render_template`` will look for that HTML template in the ``~/MyFlaskTutorial/templates``
 directory.  That's why we put it there!
 
