@@ -13,8 +13,7 @@ Set up your directories like this (put it somewhere, like your home directory)::
         /templates
 
 Copy the file ``style_lulu.css`` (find it in the Github repository, in the static directory) and put it in the ``static`` directory.  We will not
-discuss CSS style sheets in this tutorial.  It will just make your app look pretty.  Like
-magic.
+discuss CSS style sheets in this tutorial.  It will just make your app look pretty.  Like magic.  [Note: don't copy any of the other files from the GitHub repo to your computer yet --- trust me, the tutorial will be better this way.]
 
 The ``templates`` directory will hold HTML files that we will use to construct pages that
 will depend on user input.
@@ -64,13 +63,15 @@ Once the HTML file is written, you can view it in a web browser.  You can do thi
 
      open -a /Applications/Google\ Chrome.app/ userinfo_lulu.html
 
-Take a look at the url_for method in the link tag. The url_for method will help figure out the css filepath.
-    
-    url_for('static',filename='style_lulu.css')
-
 For funsies, you can try entering data to the form, then clicking on Submit.  You might get an error that looks like this::
 
     No webpage was found for the web address: file://localhost/Users/administrator/MyFlaskTutorial/templates/index_lulu
     Error 6 (net::ERR_FILE_NOT_FOUND): The file or directory could not be found.
 
 In the next part of the tutorial, we will build the backend that will generate the page that cannot currently be found.
+
+An aside:  Take a look at the url_for method in the link tag. The url_for method will help figure out the css filepath.  (Alternately, you can type the URL directly instead of using url_for.)::
+    
+    url_for('static',filename='style_lulu.css')
+
+
