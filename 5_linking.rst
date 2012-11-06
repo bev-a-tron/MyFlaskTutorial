@@ -77,9 +77,9 @@ Edit it to look like this::
 	  <form id='answerform_lulu' method='post' action='next_lulu' >
 	    <p>
 	      Answer: <br />
-	      <input type='radio' name='answer_lulu' value={{ans1}} /> {{ans1}} <br />
-	      <input type='radio' name='answer_lulu' value={{ans2}} /> {{ans2}} <br />
-	      <input type='radio' name='answer_lulu' value={{ans3}} /> {{ans3}} <br />
+	      <input type='radio' name='answer_from_layout_lulu' value={{ans1}} /> {{ans1}} <br />
+	      <input type='radio' name='answer_from_layout_lulu' value={{ans2}} /> {{ans2}} <br />
+	      <input type='radio' name='answer_from_layout_lulu' value={{ans3}} /> {{ans3}} <br />
 	    </p>
 	    
 	    <p>
