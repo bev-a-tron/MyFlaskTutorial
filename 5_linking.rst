@@ -96,7 +96,7 @@ I'm sure Google will tell you.  Some types are: text, password, radio, and check
 Now, you probably already realize that we need to refer to this HTML template with two variables,
 ``num`` (which will be the question number) and ``question`` (which will be the question asked).
 The radio button form has a number of choices, but the user can only select one answer.  The
-user data can be referred to as ``request.form['answer_lulu']`` in the ``application_lulu.py``
+user data can be referred to as ``request.form['answer_from_layout_lulu']`` in the ``application_lulu.py``
 file.
 
 Update the application program
