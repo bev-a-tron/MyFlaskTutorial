@@ -33,7 +33,7 @@ and it is equal to ``GET``.
 
 Edit ``application_lulu.py`` and see that this does not change what we have done so far::
 
-    from flask import Flask,render_template
+    from flask import Flask,render_template,request
     app_lulu = Flask(__name__)
 
     @app_lulu.route('/index_lulu',methods=['GET'])
