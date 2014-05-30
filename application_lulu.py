@@ -59,7 +59,7 @@ def next_lulu2():  #can't have two functions with the same name
 
     f=open('%s_%s.txt'%(app_lulu.vars['name'],app_lulu.vars['age']),'a') #a is for append
     f.write('%s\n'%(app_lulu.currentq))
-    f.write('%s\n\n'%(request.form['answer_lulu'])) #do you know where answer_lulu comes from?
+    f.write('%s\n\n'%(request.form['answer_from_layout_lulu'])) #do you know where answer_lulu comes from?
     f.close()
 
     app_lulu.questions.pop(app_lulu.currentq)
