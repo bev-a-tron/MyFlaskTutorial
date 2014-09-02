@@ -34,7 +34,7 @@ WOW!  It looks PRETTY!  Yes, that's the ``style_lulu.css`` that we added to the
 
 You should see the form we just made, with the user information and Submit button. 
 ``Render_template`` will look for that HTML template in the ``~/MyFlaskTutorial/templates``
- directory.  That's why we put it there!
+directory.  That's why we put it there!
 
 In the ``hello world`` example, we saw that these functions must return text
 (HTML code).  The ``render_template`` function will return text, and 
