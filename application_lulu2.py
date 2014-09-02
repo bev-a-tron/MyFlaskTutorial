@@ -24,7 +24,7 @@ def index_lulu():
 def next_lulu():
     return redirect('/usefulfunction_lulu')
 
-@app_lulu.route('/usefulfunction_lulu',methods=['POST'])
+@app_lulu.route('/usefulfunction_lulu')
 def usefulfunction_lulu():
     return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',ans2='mango',ans3='pineapple')
 
