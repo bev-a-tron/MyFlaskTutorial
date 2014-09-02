@@ -67,7 +67,7 @@ If you don't believe me, you can try out linking to the end page::
     def next_lulu():
         return redirect('/usefulfunction_lulu')
 
-    @app_lulu.route('/usefulfunction_lulu',methods=['POST'])
+    @app_lulu.route('/usefulfunction_lulu',methods=['GET','POST'])
     def usefulfunction_lulu():
         return render_template('end_lulu.html')
 

@@ -88,7 +88,7 @@ to give the rendered template::
     @app_lulu.route('/next_lulu',methods=['POST'])
     def next_lulu():
         return redirect('/usefulfunction_lulu')
-    @app_lulu.route('/usefulfunction_lulu',methods=['GET'])
+    @app_lulu.route('/usefulfunction_lulu',methods=['GET','POST'])
     def usefulfunction_lulu():
         return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',\
 	    ans2='mango',ans3='pineapple')
