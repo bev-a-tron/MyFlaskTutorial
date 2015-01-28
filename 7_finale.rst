@@ -12,7 +12,7 @@ we will "pop" that key/value pair from the dictionary.
 
 We will need to have different processing for GET and POST requests for ``/next_lulu``.  For GET requests, we want to
 generate the correct question/answer form, and for the POST requests, we want to write data to file, then redirect
-the user to either 
+the user to either the next question or the end page.
 
 I hope I haven't lost you!  Let's do it step-by-step, but you won't be able to run anything till the end of this page.
 
@@ -23,7 +23,7 @@ Create a file called ``end_lulu.html`` in the templates directory. Make it look 
     
     <!doctype html>
     <title>A short quiz</title>
-    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+    <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_lulu.css')}}'>
     <div class=page>
       <h1>A short quiz</h1>
       <div class=metanav>
