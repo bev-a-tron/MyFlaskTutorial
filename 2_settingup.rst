@@ -59,7 +59,7 @@ Open a file called ``userinfo_lulu.html``, and save it to the ``templates`` dire
       </div>
     </div>
 
-Once the HTML file is written, you can view it in a web browser.  You can do this from command line.  For example::
+Once the HTML file is written, you can view it in a web browser.  You can do this from command line.  For example, on a Mac::
 
      open -a /Applications/Google\ Chrome.app/ userinfo_lulu.html
 
