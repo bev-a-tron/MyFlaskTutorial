@@ -1,2 +1,7 @@
 env-flask
 *.txt
+.Python
+bin/
+include/
+lib/
+pip-selfcheck.json
