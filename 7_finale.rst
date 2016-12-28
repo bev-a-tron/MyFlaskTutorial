@@ -127,8 +127,8 @@ Open ``application_lulu.py`` one last time.  Change the contents to look like::
     def next_lulu(): #remember the function name does not need to match the URL
         # for clarity (temp variables)
         n = app_lulu.nquestions - len(app_lulu.questions) + 1
-        q = app_lulu.questions.keys()[0] #python indexes at 0
-        a1, a2, a3 = app_lulu.questions.values()[0] #this will return the answers corresponding to q
+        q = list(app_lulu.questions.keys())[0] #python indexes at 0
+        a1, a2, a3 = list(app_lulu.questions.values())[0] #this will return the answers corresponding to q
 
         # save the current question key
         app_lulu.currentq = q
