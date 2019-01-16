@@ -41,10 +41,7 @@ def main_lulu2():
 def next_lulu():  #remember the function name does not need to match the URL
     # for clarity (temp variables):
     n=app_lulu.nquestions-len(app_lulu.questions)+1
-    q=app_lulu.questions.keys()[0] #python indexes at 0
-    # q = list(app.questions.keys())[0] #python indexes at 0
-	# Anuar Edition for Pytho 3.4 from following Stackflow source: http://stackoverflow.com/questions/28467967/unhashable-type-dict-keys-works-in-ver-2-7-5-but-not-in-3-4
-	# In python3, as opposed to python2, keys returns an iterable set-like view object, not a list. Thus, the need to call the list function on that object to convert it into a list.
+    q = list(app_lulu.questions.keys())[0] #python indexes at 0
     a1=app_lulu.questions[q][0]
     a2=app_lulu.questions[q][1]
     a3=app_lulu.questions[q][2]
