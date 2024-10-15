@@ -143,11 +143,11 @@ Try running the application again.  To remind you, navigate to ``~/MyFlaskTutori
 
     python application_lulu.py
 
-Then go to ``127.0.0.1:5000/index_lulu``.  Enter your information, then click on Submit..
+Then go to ``127.0.0.1:5001/index_lulu``.  Enter your information, then click on Submit..
 
 DID YOU GET TO YOUR QUESTION PAGE?  I HOPE SO!
 
-Answer the question, then click on Next.  You should be at the address ``127.0.0.1:5000/next_lulu``
+Answer the question, then click on Next.  You should be at the address ``127.0.0.1:5001/next_lulu``
 and you should get an error that says::
 
     Not Found

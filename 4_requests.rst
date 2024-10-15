@@ -25,7 +25,7 @@ GET requests
 ------------
 
 In the application we have written so far, we have just done a ``GET`` request.  We have asked for a webpage
-at ``127.0.0.1:5000/index_lulu``.  Then ``application_lulu.py`` found the correct function to call, and it
+at ``127.0.0.1:5001/index_lulu``.  Then ``application_lulu.py`` found the correct function to call, and it
 returned a webpage (``~/MyFlaskTutorial/templates/userinfo_lulu.html``).
 
 In the function ``index_lulu`` (inside ``application_lulu.py``), the attribute ``request.method`` exists,

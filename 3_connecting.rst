@@ -27,7 +27,7 @@ You can try running it now with::
 
 Open a browser window and go to::
     
-    127.0.0.1:5000/index_lulu
+    127.0.0.1:5001/index_lulu
 
 WOW!  It looks PRETTY!  Yes, that's the ``style_lulu.css`` that we added to the 
 ``~/MyFlaskTutorial/static directory``.  Don't worry about it for now.
@@ -110,7 +110,7 @@ For the time being, in ``application_lulu.py``, we have created a decorated func
     def index_lulu():
     	...
 
-So, the webpage CAN be found at ``127.0.0.1:5000/index_lulu``, and we are telling the client that the 
+So, the webpage CAN be found at ``127.0.0.1:5001/index_lulu``, and we are telling the client that the
 webpage to be returned (when Submit is clicked) is ``userinfo_lulu.html``, which can be found in 
 the ``~/MyFlaskTutorial/templates``
 
