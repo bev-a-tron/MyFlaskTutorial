@@ -64,13 +64,13 @@ Open a file called hello_lulu.py.  Type the following::
         return 'Hello World!'
 
     if __name__ == '__main__':
-        app_lulu.run(debug=True)
+        app_lulu.run(port=5001, debug=True)
 
 Now, run the code from command line using::
 
     >> python hello_lulu.py
 
-Running this code will start a server at: 127.0.0.1:5000/hello_page_lulu.  If you 
+Running this code will start a server at: 127.0.0.1:5001/hello_page_lulu.  If you
 visit that address in a browser window, you should see a blank screen with 
 text at the top left corner, which says "Hello World!" 
 
@@ -85,7 +85,8 @@ one long string will translate to an HTML page easily.
 Short note on browsers
 ----------------------
 
-127.0.0.1 is Home, or your own computer.  5000 is the port number.  Flask
-puts the server on Port 5000 as the default. I'm not going to talk a lot 
-about this (actually I'm not going to talk at all about this), because you 
-can play with this on your own later.
+127.0.0.1 is Home, or your own computer.  5001 is the port number.  Flask
+puts the server on Port 5000 as the default. MacOS Monterey started using
+Port 5000 for AirPlay, so let's use 5001. I'm not going to talk a lot about
+this (actually I'm not going to talk at all about this), because you can
+play with this on your own later.

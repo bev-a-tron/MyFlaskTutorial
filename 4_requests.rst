@@ -45,7 +45,7 @@ Edit ``application_lulu.py`` and see that this does not change what we have done
             return 'request.method was not a GET!'
 
     if __name__ == "__main__":
-        app_lulu.run(debug=True)
+        app_lulu.run(port=5001, debug=True)
         
 Note that we instruct the application which types of requests to accept in the line::
 

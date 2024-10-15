@@ -3,6 +3,7 @@ app_lulu = Flask(__name__)
 
 app_lulu.vars={}
 
+
 @app_lulu.route('/index_lulu',methods=['GET','POST'])
 def index_lulu():
     nquestions=5
@@ -20,13 +21,16 @@ def index_lulu():
 
         return render_template('layout_lulu.html',num=1,question='How many eyes do you have?',ans1='1',ans2='2',ans3='3')
 
+
 @app_lulu.route('/next_lulu',methods=['POST'])
 def next_lulu():
     return redirect('/usefulfunction_lulu')
+
 
 @app_lulu.route('/usefulfunction_lulu',methods=['GET','POST'])
 def usefulfunction_lulu():
     return render_template('layout_lulu.html',num=1,question='Which fruit do you like best?',ans1='banana',ans2='mango',ans3='pineapple')
 
+
 if __name__ == "__main__":
-    app_lulu.run()
+    app_lulu.run(port=5001, debug=True)

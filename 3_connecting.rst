@@ -19,7 +19,7 @@ Inside ``application_lulu.py``, edit the file to look like this::
            return render_template('userinfo_lulu.html')
 
        if __name__ == "__main__":
-           app_lulu.run(debug=True)
+           app_lulu.run(port=5001, debug=True)
 
 You can try running it now with::
 
@@ -57,7 +57,7 @@ To do this, edit the ``application_lulu.py`` file::
            return render_template('userinfo_lulu.html',num=nquestions)
 
        if __name__ == "__main__":
-           app_lulu.run(debug=True)
+           app_lulu.run(port=5001, debug=True)
 
 You also need to edit the HTML file to tell it to expect the variable
 ``num`` and to tell it what to do with that information.

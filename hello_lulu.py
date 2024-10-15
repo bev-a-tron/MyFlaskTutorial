@@ -5,6 +5,7 @@ app_lulu = Flask(__name__)
 def hello_lulu():
     return 'Hello World'
 
+
 if __name__ == '__main__':
-    app_lulu.run()
+    app_lulu.run(port=5001, debug=True)
 

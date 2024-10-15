@@ -5,3 +5,4 @@ bin/
 include/
 lib/
 pip-selfcheck.json
+.idea

@@ -72,7 +72,7 @@ If you don't believe me, you can try out linking to the end page::
         return render_template('end_lulu.html')
 
     if __name__ == "__main__":
-        app_lulu.run(debug=True)
+        app_lulu.run(port=5001, debug=True)
 
 You can try running this.  It will ask you the first question, and when you click Next, it will take you to the End page
 we just made.
@@ -152,7 +152,7 @@ Open ``application_lulu.py`` one last time.  Change the contents to look like::
         return redirect('/main_lulu')
 
     if __name__ == "__main__":
-        app_lulu.run(debug=True)
+        app_lulu.run(port=5001, debug=True)
 
 Try running it.  I HOPE IT WORKS FOR YOU, TOO!  If you look at the code here, you can hopefully follow which
 functions are being called as you click through the web application.  

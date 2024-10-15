@@ -39,7 +39,7 @@ which will store responses to the questions in the quiz.  Edit the file called
             return 'request.method was not a GET!'
 
     if __name__ == "__main__":
-        app_lulu.run(debug=True)
+        app_lulu.run(port=5001, debug=True)
 
 You can try running this on the server. Enter your name and age, click on Submit.  You
 should find a new file saved to your ``~/MyFlaskTutorial`` directory called name_age.txt.
@@ -137,7 +137,7 @@ The full ``application_lulu.py`` should look like::
 	        ans2='2',ans3='3')
 
     if __name__ == "__main__":
-        app_lulu.run(debug=True)
+        app_lulu.run(port=5001, debug=True)
         
 Try running the application again.  To remind you, navigate to ``~/MyFlaskTutorial`` and type::
 

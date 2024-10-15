@@ -28,6 +28,7 @@ def index_lulu():
 
         return redirect('/main_lulu')
 
+
 @app_lulu.route('/main_lulu')
 def main_lulu2():
     if len(app_lulu.questions)==0 : return render_template('end_lulu.html')
@@ -36,6 +37,7 @@ def main_lulu2():
 #####################################
 ## IMPORTANT: I have separated /next_lulu INTO GET AND POST
 ## You can also do this in one function, with If and Else.
+
 
 @app_lulu.route('/next_lulu',methods=['GET'])
 def next_lulu():  #remember the function name does not need to match the URL
@@ -50,6 +52,7 @@ def next_lulu():  #remember the function name does not need to match the URL
     app_lulu.currentq=q
 
     return render_template('layout_lulu.html',num=n,question=q,ans1=a1,ans2=a2,ans3=a3)
+
 
 @app_lulu.route('/next_lulu',methods=['POST'])
 def next_lulu2():  #can't have two functions with the same name
@@ -66,5 +69,6 @@ def next_lulu2():  #can't have two functions with the same name
 
     return redirect('/main_lulu')
 
+
 if __name__ == "__main__":
-    app_lulu.run()
+    app_lulu.run(port=5001, debug=True)
